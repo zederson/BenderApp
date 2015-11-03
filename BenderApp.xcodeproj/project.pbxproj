@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53A2544B1BE952F800DCD374 /* ZEMessageClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A2544A1BE952F800DCD374 /* ZEMessageClientDelegate.m */; };
+		53EA880F1BE7DF22007712DB /* BenderAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA880E1BE7DF22007712DB /* BenderAppTests.m */; };
+		53EA881A1BE7DF22007712DB /* BenderAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88191BE7DF22007712DB /* BenderAppUITests.m */; };
+		53EA88381BE7E181007712DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88291BE7E181007712DB /* AppDelegate.m */; };
+		53EA88391BE7E181007712DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA882C1BE7E181007712DB /* ViewController.m */; };
+		53EA883A1BE7E181007712DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EA882F1BE7E181007712DB /* Assets.xcassets */; };
+		53EA883B1BE7E181007712DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EA88301BE7E181007712DB /* LaunchScreen.storyboard */; };
+		53EA883C1BE7E181007712DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EA88321BE7E181007712DB /* Main.storyboard */; };
+		53EA883E1BE7E181007712DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88361BE7E181007712DB /* main.m */; };
+		8C9AA8F68EF9C8B584F1E9DF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BB35A1DE1B9EF78A7E7E6 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53EA880B1BE7DF22007712DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53EA87E91BE7DF21007712DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53EA87F01BE7DF21007712DB;
+			remoteInfo = BenderApp;
+		};
+		53EA88161BE7DF22007712DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53EA87E91BE7DF21007712DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53EA87F01BE7DF21007712DB;
+			remoteInfo = BenderApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		53A254491BE952F800DCD374 /* ZEMessageClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMessageClientDelegate.h; sourceTree = "<group>"; };
+		53A2544A1BE952F800DCD374 /* ZEMessageClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMessageClientDelegate.m; sourceTree = "<group>"; };
+		53EA87F11BE7DF21007712DB /* BenderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EA880A1BE7DF22007712DB /* BenderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EA880E1BE7DF22007712DB /* BenderAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BenderAppTests.m; sourceTree = "<group>"; };
+		53EA88101BE7DF22007712DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EA88151BE7DF22007712DB /* BenderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EA88191BE7DF22007712DB /* BenderAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BenderAppUITests.m; sourceTree = "<group>"; };
+		53EA881B1BE7DF22007712DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EA88281BE7E181007712DB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		53EA88291BE7E181007712DB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		53EA882B1BE7E181007712DB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		53EA882C1BE7E181007712DB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		53EA882F1BE7E181007712DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53EA88311BE7E181007712DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53EA88331BE7E181007712DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53EA88351BE7E181007712DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EA88361BE7E181007712DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99FF0AF4DE8BE0B637BF9F0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D00BB35A1DE1B9EF78A7E7E6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53EA87EE1BE7DF21007712DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9AA8F68EF9C8B584F1E9DF /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EA88071BE7DF22007712DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EA88121BE7DF22007712DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53EA87E81BE7DF21007712DB = {
+			isa = PBXGroup;
+			children = (
+				53EA87F31BE7DF22007712DB /* BenderApp */,
+				53EA880D1BE7DF22007712DB /* BenderAppTests */,
+				53EA88181BE7DF22007712DB /* BenderAppUITests */,
+				53EA87F21BE7DF21007712DB /* Products */,
+				8EA7058B11DF4CC364860C5F /* Pods */,
+				E59AA0E585DAA7DD2E548440 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		53EA87F21BE7DF21007712DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53EA87F11BE7DF21007712DB /* BenderApp.app */,
+				53EA880A1BE7DF22007712DB /* BenderAppTests.xctest */,
+				53EA88151BE7DF22007712DB /* BenderAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53EA87F31BE7DF22007712DB /* BenderApp */ = {
+			isa = PBXGroup;
+			children = (
+				53EA883F1BE7E202007712DB /* Services */,
+				53EA88271BE7E181007712DB /* AppDelegate */,
+				53EA882A1BE7E181007712DB /* Controllers */,
+				53EA882D1BE7E181007712DB /* Model */,
+				53EA882E1BE7E181007712DB /* Resources */,
+				53EA88341BE7E181007712DB /* Supporting Files */,
+				53EA88371BE7E181007712DB /* Views */,
+			);
+			path = BenderApp;
+			sourceTree = "<group>";
+		};
+		53EA880D1BE7DF22007712DB /* BenderAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				53EA880E1BE7DF22007712DB /* BenderAppTests.m */,
+				53EA88101BE7DF22007712DB /* Info.plist */,
+			);
+			path = BenderAppTests;
+			sourceTree = "<group>";
+		};
+		53EA88181BE7DF22007712DB /* BenderAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				53EA88191BE7DF22007712DB /* BenderAppUITests.m */,
+				53EA881B1BE7DF22007712DB /* Info.plist */,
+			);
+			path = BenderAppUITests;
+			sourceTree = "<group>";
+		};
+		53EA88271BE7E181007712DB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				53EA88281BE7E181007712DB /* AppDelegate.h */,
+				53EA88291BE7E181007712DB /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		53EA882A1BE7E181007712DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53EA882B1BE7E181007712DB /* ViewController.h */,
+				53EA882C1BE7E181007712DB /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		53EA882D1BE7E181007712DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53EA882E1BE7E181007712DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53EA882F1BE7E181007712DB /* Assets.xcassets */,
+				53EA88301BE7E181007712DB /* LaunchScreen.storyboard */,
+				53EA88321BE7E181007712DB /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		53EA88341BE7E181007712DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53EA88351BE7E181007712DB /* Info.plist */,
+				53EA88361BE7E181007712DB /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53EA88371BE7E181007712DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53EA883F1BE7E202007712DB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				53A254491BE952F800DCD374 /* ZEMessageClientDelegate.h */,
+				53A2544A1BE952F800DCD374 /* ZEMessageClientDelegate.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8EA7058B11DF4CC364860C5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */,
+				99FF0AF4DE8BE0B637BF9F0B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E59AA0E585DAA7DD2E548440 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D00BB35A1DE1B9EF78A7E7E6 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53EA87F01BE7DF21007712DB /* BenderApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EA881E1BE7DF22007712DB /* Build configuration list for PBXNativeTarget "BenderApp" */;
+			buildPhases = (
+				52B0FE2F4BC758AAAF8830AE /* Check Pods Manifest.lock */,
+				53EA87ED1BE7DF21007712DB /* Sources */,
+				53EA87EE1BE7DF21007712DB /* Frameworks */,
+				53EA87EF1BE7DF21007712DB /* Resources */,
+				463199E6A1F7FEF8136F5768 /* Embed Pods Frameworks */,
+				BBE761B96131D5C24D4C5D71 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BenderApp;
+			productName = BenderApp;
+			productReference = 53EA87F11BE7DF21007712DB /* BenderApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53EA88091BE7DF22007712DB /* BenderAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EA88211BE7DF22007712DB /* Build configuration list for PBXNativeTarget "BenderAppTests" */;
+			buildPhases = (
+				53EA88061BE7DF22007712DB /* Sources */,
+				53EA88071BE7DF22007712DB /* Frameworks */,
+				53EA88081BE7DF22007712DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53EA880C1BE7DF22007712DB /* PBXTargetDependency */,
+			);
+			name = BenderAppTests;
+			productName = BenderAppTests;
+			productReference = 53EA880A1BE7DF22007712DB /* BenderAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53EA88141BE7DF22007712DB /* BenderAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EA88241BE7DF22007712DB /* Build configuration list for PBXNativeTarget "BenderAppUITests" */;
+			buildPhases = (
+				53EA88111BE7DF22007712DB /* Sources */,
+				53EA88121BE7DF22007712DB /* Frameworks */,
+				53EA88131BE7DF22007712DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53EA88171BE7DF22007712DB /* PBXTargetDependency */,
+			);
+			name = BenderAppUITests;
+			productName = BenderAppUITests;
+			productReference = 53EA88151BE7DF22007712DB /* BenderAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53EA87E91BE7DF21007712DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZE;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Ederson Lima";
+				TargetAttributes = {
+					53EA87F01BE7DF21007712DB = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7Y9H794NC3;
+					};
+					53EA88091BE7DF22007712DB = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7Y9H794NC3;
+						TestTargetID = 53EA87F01BE7DF21007712DB;
+					};
+					53EA88141BE7DF22007712DB = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7Y9H794NC3;
+						TestTargetID = 53EA87F01BE7DF21007712DB;
+					};
+				};
+			};
+			buildConfigurationList = 53EA87EC1BE7DF21007712DB /* Build configuration list for PBXProject "BenderApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53EA87E81BE7DF21007712DB;
+			productRefGroup = 53EA87F21BE7DF21007712DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53EA87F01BE7DF21007712DB /* BenderApp */,
+				53EA88091BE7DF22007712DB /* BenderAppTests */,
+				53EA88141BE7DF22007712DB /* BenderAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53EA87EF1BE7DF21007712DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EA883B1BE7E181007712DB /* LaunchScreen.storyboard in Resources */,
+				53EA883A1BE7E181007712DB /* Assets.xcassets in Resources */,
+				53EA883C1BE7E181007712DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EA88081BE7DF22007712DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EA88131BE7DF22007712DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		463199E6A1F7FEF8136F5768 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52B0FE2F4BC758AAAF8830AE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBE761B96131D5C24D4C5D71 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53EA87ED1BE7DF21007712DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EA88391BE7E181007712DB /* ViewController.m in Sources */,
+				53EA883E1BE7E181007712DB /* main.m in Sources */,
+				53A2544B1BE952F800DCD374 /* ZEMessageClientDelegate.m in Sources */,
+				53EA88381BE7E181007712DB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EA88061BE7DF22007712DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EA880F1BE7DF22007712DB /* BenderAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53EA88111BE7DF22007712DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EA881A1BE7DF22007712DB /* BenderAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53EA880C1BE7DF22007712DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53EA87F01BE7DF21007712DB /* BenderApp */;
+			targetProxy = 53EA880B1BE7DF22007712DB /* PBXContainerItemProxy */;
+		};
+		53EA88171BE7DF22007712DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53EA87F01BE7DF21007712DB /* BenderApp */;
+			targetProxy = 53EA88161BE7DF22007712DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53EA88301BE7E181007712DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EA88311BE7E181007712DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		53EA88321BE7E181007712DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EA88331BE7E181007712DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53EA881C1BE7DF22007712DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53EA881D1BE7DF22007712DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53EA881F1BE7DF22007712DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/BenderApp/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ederson.BenderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		53EA88201BE7DF22007712DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99FF0AF4DE8BE0B637BF9F0B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/BenderApp/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ederson.BenderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		53EA88221BE7DF22007712DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BenderAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ederson.BenderAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BenderApp.app/BenderApp";
+			};
+			name = Debug;
+		};
+		53EA88231BE7DF22007712DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BenderAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ederson.BenderAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BenderApp.app/BenderApp";
+			};
+			name = Release;
+		};
+		53EA88251BE7DF22007712DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BenderAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ederson.BenderAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BenderApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		53EA88261BE7DF22007712DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BenderAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ederson.BenderAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BenderApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53EA87EC1BE7DF21007712DB /* Build configuration list for PBXProject "BenderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EA881C1BE7DF22007712DB /* Debug */,
+				53EA881D1BE7DF22007712DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EA881E1BE7DF22007712DB /* Build configuration list for PBXNativeTarget "BenderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EA881F1BE7DF22007712DB /* Debug */,
+				53EA88201BE7DF22007712DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EA88211BE7DF22007712DB /* Build configuration list for PBXNativeTarget "BenderAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EA88221BE7DF22007712DB /* Debug */,
+				53EA88231BE7DF22007712DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EA88241BE7DF22007712DB /* Build configuration list for PBXNativeTarget "BenderAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53EA88251BE7DF22007712DB /* Debug */,
+				53EA88261BE7DF22007712DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53EA87E91BE7DF21007712DB /* Project object */;
+}
