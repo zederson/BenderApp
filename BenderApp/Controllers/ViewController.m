@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import <MQTTKit/MQTTKit.h>
+#import "ZEMessageClient.h"
 
-@interface ViewController ()
+@interface ViewController ()<ZeMessageClientDelegate>
 
 @end
 
@@ -17,27 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    NSString *host = @"cpro25389.publiccloud.com.br";
-    NSString *topic = @"sensors/socket/1";
     
-    MQTTClient *client = [[MQTTClient alloc] initWithClientId:@"bender_app"];
-    
-    [client connectToHost:host completionHandler:^(MQTTConnectionReturnCode code) {
-        if (code == ConnectionAccepted) {
-            [client subscribe:topic withCompletionHandler:nil];
-            [client subscribe:@"sensors/temperature" withCompletionHandler:nil];
-        }
-    }];
-    
-    [client setMessageHandler:^(MQTTMessage *message) {
-        NSString *text = message.payloadString;
-        NSLog(@"received message %@ - %@", message.topic, text);
-    }];
+    ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
+    messageClient.delegate = self;
+    [messageClient subscribe];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (NSArray<NSString *> *)topicsToSubscribes {
+    return @[@"sensors/socket/1", @"sensors/temperature"];
+}
+
+-(void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
+    NSLog(@"received message %@ - %@", message, topic);
+}
 @end

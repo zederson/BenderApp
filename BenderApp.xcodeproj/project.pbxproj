@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53A2544B1BE952F800DCD374 /* ZEMessageClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A2544A1BE952F800DCD374 /* ZEMessageClientDelegate.m */; };
+		53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A2544D1BE9540000DCD374 /* ZEMessageClient.m */; };
 		53EA880F1BE7DF22007712DB /* BenderAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA880E1BE7DF22007712DB /* BenderAppTests.m */; };
 		53EA881A1BE7DF22007712DB /* BenderAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88191BE7DF22007712DB /* BenderAppUITests.m */; };
 		53EA88381BE7E181007712DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88291BE7E181007712DB /* AppDelegate.m */; };
@@ -38,8 +38,8 @@
 
 /* Begin PBXFileReference section */
 		4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		53A254491BE952F800DCD374 /* ZEMessageClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMessageClientDelegate.h; sourceTree = "<group>"; };
-		53A2544A1BE952F800DCD374 /* ZEMessageClientDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMessageClientDelegate.m; sourceTree = "<group>"; };
+		53A2544C1BE9540000DCD374 /* ZEMessageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMessageClient.h; sourceTree = "<group>"; };
+		53A2544D1BE9540000DCD374 /* ZEMessageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMessageClient.m; sourceTree = "<group>"; };
 		53EA87F11BE7DF21007712DB /* BenderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EA880A1BE7DF22007712DB /* BenderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EA880E1BE7DF22007712DB /* BenderAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BenderAppTests.m; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 		53EA883F1BE7E202007712DB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				53A254491BE952F800DCD374 /* ZEMessageClientDelegate.h */,
-				53A2544A1BE952F800DCD374 /* ZEMessageClientDelegate.m */,
+				53A2544C1BE9540000DCD374 /* ZEMessageClient.h */,
+				53A2544D1BE9540000DCD374 /* ZEMessageClient.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -404,8 +404,8 @@
 			files = (
 				53EA88391BE7E181007712DB /* ViewController.m in Sources */,
 				53EA883E1BE7E181007712DB /* main.m in Sources */,
-				53A2544B1BE952F800DCD374 /* ZEMessageClientDelegate.m in Sources */,
 				53EA88381BE7E181007712DB /* AppDelegate.m in Sources */,
+				53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
