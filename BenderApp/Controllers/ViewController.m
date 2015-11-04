@@ -12,6 +12,9 @@
 
 @interface ViewController ()<ZeMessageClientDelegate>
 
+@property (nonatomic, strong) IBOutlet UILabel *labelTemperature;
+@property (nonatomic, strong) IBOutlet UILabel *labelLuminosity;
+
 @end
 
 @implementation ViewController
@@ -30,10 +33,18 @@
 }
 
 - (NSArray<NSString *> *)topicsToSubscribes {
-    return @[@"sensors/socket/1", @"sensors/temperature"];
+    return @[@"sensors/luminosity", @"sensors/temperature"];
 }
 
 -(void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
-    NSLog(@"received message %@ - %@", message, topic);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UILabel *label = nil;
+        if ([@"sensors/temperature" isEqualToString:topic]) {
+            label = self.labelTemperature;
+        } else if ([@"sensors/luminosity" isEqualToString:topic]) {
+            label = self.labelLuminosity;
+        }
+        label.text = message;
+    });
 }
 @end
