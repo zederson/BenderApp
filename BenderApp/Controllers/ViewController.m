@@ -43,9 +43,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self animateLabel:self.labelLuminosity];
     [self animateLabel:self.infoLabelLuminosity];
-    [self animateLabel:self.labelTemperature];
     [self animateLabel:self.infoLabelTemperature];
 }
 
@@ -57,31 +55,27 @@
 - (void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *lastValue = [self.sensorsValues objectForKey:topic];
+        NSString *value     = message;
         
         if (![topic isEqualToString:lastValue]) {
             UILabel *label = nil;
-        
             if ([@"sensors/temperature" isEqualToString:topic]) {
-                [self setSensorsValue:self.labelTemperature withText:message format:@"%@"];
-                label = self.labelTemperature;
+                label = [self setSensorsValue:self.labelTemperature withText:message format:@"%@"];
             } else if ([@"sensors/luminosity" isEqualToString:topic]) {
-                NSNumber *val       = @([message floatValue] / 1023 * 100);
-                NSString *converted = [NSString stringWithFormat:@"%d", [val integerValue]];
-                [self setSensorsValue:self.labelLuminosity withText:converted format:@"%@ %%"];
-                label = self.labelLuminosity;
+                NSNumber *val = @([message floatValue] / 1023 * 100);
+                value         = [NSString stringWithFormat:@"%d", [val integerValue]];
+                label         = [self setSensorsValue:self.labelLuminosity withText:value format:@"%@ %%"];
             }
-        
             [self animateLabel:label];
         }
-        
-        [self.sensorsValues setObject:message forKey:topic];
+        [self.sensorsValues setObject:value forKey:topic];
     });
 }
 
 # pragma mark Local Methods
-- (void) setSensorsValue: (UILabel *) label withText: (NSString *) text format:(NSString *) format {
-    NSString *value = [NSString stringWithFormat:format, text];
-    label.text = value;
+- (UILabel *) setSensorsValue: (UILabel *) label withText: (NSString *) text format:(NSString *) format {
+    label.text = [NSString stringWithFormat:format, text];
+    return label;
 }
 
 - (void) animateLabel: (UILabel *) label {
@@ -91,5 +85,4 @@
     } completion:^(BOOL finished) {
     }];
 }
-
 @end
