@@ -12,12 +12,12 @@
 
 @interface ViewController ()<ZeMessageClientDelegate>
 
-//Labels de sensores
+//outlets de sensores
 @property (nonatomic, weak) IBOutlet UILabel *labelTemperature;
-@property (nonatomic, weak) IBOutlet UILabel *infoLabelTemperature;
 @property (nonatomic, weak) IBOutlet UILabel *labelLuminosity;
-@property (nonatomic, weak) IBOutlet UILabel *infoLabelLuminosity;
-@property (nonatomic, weak) IBOutlet UIView *viewSensors;
+
+@property (nonatomic, weak) IBOutlet UIView *viewTemperature;
+@property (nonatomic, weak) IBOutlet UIView *viewLuminosity;
 
 //locals
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *sensorsValues;
@@ -29,22 +29,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.sensorsValues = [NSMutableDictionary dictionary];
+    self.sensorsValues             = [NSMutableDictionary dictionary];
     ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
-    messageClient.delegate = self;
+    messageClient.delegate         = self;
     [messageClient subscribe];
     
-    self.viewSensors.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors.jpg"]];
+    [self configureSensorsViews];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self animateLabel:self.infoLabelLuminosity];
-    [self animateLabel:self.infoLabelTemperature];
+    [self animateLabel:self.viewTemperature];
+    [self animateLabel:self.viewLuminosity];
 }
 
 # pragma mark Bender Messages
@@ -72,17 +71,29 @@
     });
 }
 
-# pragma mark Local Methods
+# pragma mark Commons Methods
 - (UILabel *) setSensorsValue: (UILabel *) label withText: (NSString *) text format:(NSString *) format {
     label.text = [NSString stringWithFormat:format, text];
     return label;
 }
 
-- (void) animateLabel: (UILabel *) label {
+- (void) animateLabel: (UIView *) label {
     label.transform = CGAffineTransformMakeScale(0, 0);
     [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseIn animations:^{
         label.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
     }];
 }
+
+- (void) configureSensorsViews {
+    self.viewTemperature.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors.jpg"]];
+    self.viewLuminosity.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors.jpg"]];
+    
+    self.viewTemperature.layer.cornerRadius  = 15.0f;
+    self.viewTemperature.layer.masksToBounds = YES;
+
+    self.viewLuminosity.layer.cornerRadius   = 15.0f;
+    self.viewLuminosity.layer.masksToBounds  = YES;
+}
+
 @end
