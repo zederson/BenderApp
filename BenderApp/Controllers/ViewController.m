@@ -36,15 +36,21 @@
     return @[@"sensors/luminosity", @"sensors/temperature"];
 }
 
--(void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
+- (void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UILabel *label = nil;
         if ([@"sensors/temperature" isEqualToString:topic]) {
-            label = self.labelTemperature;
+            [self setSensorsValue:self.labelTemperature withText:message format:@"%@º C"];
         } else if ([@"sensors/luminosity" isEqualToString:topic]) {
-            label = self.labelLuminosity;
+            NSNumber *val       = @([message floatValue] / 1023 * 100);
+            NSString *converted = [NSString stringWithFormat:@"%d", [val integerValue]];
+            [self setSensorsValue:self.labelLuminosity withText:converted format:@"%@ %%"];
         }
-        label.text = message;
     });
 }
+
+- (void) setSensorsValue: (UILabel *) label withText: (NSString *) text format:(NSString *) format {
+    NSString *value = [NSString stringWithFormat:format, text];
+    label.text = value;
+}
+
 @end
