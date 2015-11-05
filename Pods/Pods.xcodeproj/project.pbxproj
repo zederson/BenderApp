@@ -835,6 +835,17 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					609B4457212358FB9F737E2A6108427D = {
+						DevelopmentTeam = 7Y9H794NC3;
+					};
+					993873D0B5A72018C078B68756896F1F = {
+						DevelopmentTeam = 7Y9H794NC3;
+					};
+					AFEDA8059B169E4068B6DCC4D2F0B0E9 = {
+						DevelopmentTeam = 7Y9H794NC3;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -984,6 +995,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C26C0B83546E3ABC26714E5E0887D67 /* BlocksKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -999,6 +1011,7 @@
 				MODULEMAP_FILE = "Target Support Files/BlocksKit/BlocksKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = BlocksKit;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1011,6 +1024,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8BCA2154E85457227F922DF2D50E132 /* DateTools.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1026,6 +1040,7 @@
 				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = DateTools;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1107,6 +1122,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75660428DF92DA22D5E1F245B777F6AC /* MQTTKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1122,6 +1138,7 @@
 				MODULEMAP_FILE = "Target Support Files/MQTTKit/MQTTKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MQTTKit;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1168,6 +1185,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8BCA2154E85457227F922DF2D50E132 /* DateTools.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1183,6 +1201,7 @@
 				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = DateTools;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1195,6 +1214,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75660428DF92DA22D5E1F245B777F6AC /* MQTTKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1210,6 +1230,7 @@
 				MODULEMAP_FILE = "Target Support Files/MQTTKit/MQTTKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = MQTTKit;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1252,6 +1273,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C26C0B83546E3ABC26714E5E0887D67 /* BlocksKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1267,6 +1289,7 @@
 				MODULEMAP_FILE = "Target Support Files/BlocksKit/BlocksKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = BlocksKit;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

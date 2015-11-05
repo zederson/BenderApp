@@ -12,11 +12,15 @@
 
 @interface ViewController ()<ZeMessageClientDelegate>
 
+//Labels de sensores
 @property (nonatomic, weak) IBOutlet UILabel *labelTemperature;
 @property (nonatomic, weak) IBOutlet UILabel *infoLabelTemperature;
 @property (nonatomic, weak) IBOutlet UILabel *labelLuminosity;
 @property (nonatomic, weak) IBOutlet UILabel *infoLabelLuminosity;
 @property (nonatomic, weak) IBOutlet UIView *viewSensors;
+
+//locals
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *sensorsValues;
 
 @end
 
@@ -25,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.sensorsValues = [NSMutableDictionary dictionary];
     ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
     messageClient.delegate = self;
     [messageClient subscribe];
@@ -51,13 +56,25 @@
 
 - (void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([@"sensors/temperature" isEqualToString:topic]) {
-            [self setSensorsValue:self.labelTemperature withText:message format:@"%@"];
-        } else if ([@"sensors/luminosity" isEqualToString:topic]) {
-            NSNumber *val       = @([message floatValue] / 1023 * 100);
-            NSString *converted = [NSString stringWithFormat:@"%d", [val integerValue]];
-            [self setSensorsValue:self.labelLuminosity withText:converted format:@"%@ %%"];
+        NSString *lastValue = [self.sensorsValues objectForKey:topic];
+        
+        if (![topic isEqualToString:lastValue]) {
+            UILabel *label = nil;
+        
+            if ([@"sensors/temperature" isEqualToString:topic]) {
+                [self setSensorsValue:self.labelTemperature withText:message format:@"%@"];
+                label = self.labelTemperature;
+            } else if ([@"sensors/luminosity" isEqualToString:topic]) {
+                NSNumber *val       = @([message floatValue] / 1023 * 100);
+                NSString *converted = [NSString stringWithFormat:@"%d", [val integerValue]];
+                [self setSensorsValue:self.labelLuminosity withText:converted format:@"%@ %%"];
+                label = self.labelLuminosity;
+            }
+        
+            [self animateLabel:label];
         }
+        
+        [self.sensorsValues setObject:message forKey:topic];
     });
 }
 
