@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/BlocksKit.framework"
+  install_framework "Pods/DGActivityIndicatorView.framework"
   install_framework "Pods/DateTools.framework"
   install_framework "Pods/MQTTKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/BlocksKit.framework"
+  install_framework "Pods/DGActivityIndicatorView.framework"
   install_framework "Pods/DateTools.framework"
   install_framework "Pods/MQTTKit.framework"
 fi

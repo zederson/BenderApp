@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DateTools.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>609B4457212358FB9F737E2A6108427D</key>
+		<key>291621037D68F7869D267C25CE205F97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62270F86A79B6C96D659AD7EBA46EA9E</key>
+		<key>413BEC720946F0B4A1E05A7F68D48697</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>609B4457212358FB9F737E2A6108427D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

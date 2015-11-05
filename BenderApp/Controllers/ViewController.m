@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <MQTTKit/MQTTKit.h>
 #import "ZEMessageClient.h"
+#import <DGActivityIndicatorView/DGActivityIndicatorView.h>
 
 @interface ViewController ()<ZeMessageClientDelegate>
 
@@ -18,6 +19,9 @@
 
 @property (nonatomic, weak) IBOutlet UIView *viewTemperature;
 @property (nonatomic, weak) IBOutlet UIView *viewLuminosity;
+@property (nonatomic, weak) IBOutlet UIView *viewSensors;
+@property (nonatomic, weak) IBOutlet UIView *activityViewSensors;
+@property (nonatomic, strong) DGActivityIndicatorView *activitySensors;
 
 //locals
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *sensorsValues;
@@ -33,7 +37,6 @@
     ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
     messageClient.delegate         = self;
     [messageClient subscribe];
-    
     [self configureSensorsViews];
 }
 
@@ -53,6 +56,7 @@
 
 - (void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self stopActivity:self.activitySensors];
         NSString *lastValue = [self.sensorsValues objectForKey:topic];
         NSString *value     = message;
         
@@ -90,9 +94,26 @@
     
     self.viewTemperature.layer.cornerRadius  = 15.0f;
     self.viewTemperature.layer.masksToBounds = YES;
-
+    
     self.viewLuminosity.layer.cornerRadius   = 15.0f;
     self.viewLuminosity.layer.masksToBounds  = YES;
+    [self addActivitySensors];
+    
+}
+
+- (void) addActivitySensors {
+    self.activitySensors = [[DGActivityIndicatorView alloc]
+                            initWithType:DGActivityIndicatorAnimationTypeCookieTerminator
+                            tintColor:[UIColor cyanColor] size:20.0f];
+    
+    self.activitySensors.frame = CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
+    [self.activityViewSensors addSubview:self.activitySensors];
+    [self.activitySensors startAnimating];
+}
+
+- (void) stopActivity: (DGActivityIndicatorView *) activity {
+    [activity stopAnimating];
+    activity.hidden = YES;
 }
 
 @end

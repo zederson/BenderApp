@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -36,17 +36,20 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZH-6Z-BIZ">
                                                 <rect key="frame" x="41" y="52" width="62" height="12"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="º C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fap-vB-qDR">
                                                 <rect key="frame" x="99" y="35" width="14" height="11"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="uZH-6Z-BIZ" secondAttribute="bottom" constant="8" id="2lz-AV-wCV"/>
                                             <constraint firstItem="uZH-6Z-BIZ" firstAttribute="top" secondItem="3EN-fd-Dqd" secondAttribute="bottom" constant="2" id="84u-md-fGF"/>
@@ -68,11 +71,13 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luminosidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-Wh-0sB">
                                                 <rect key="frame" x="110" y="52" width="68" height="12"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
                                             <constraint firstItem="EjT-Wh-0sB" firstAttribute="centerX" secondItem="8GI-Tt-n8a" secondAttribute="centerX" id="HDh-Cq-7kb"/>
@@ -81,11 +86,20 @@
                                             <constraint firstItem="5nP-dx-0X2" firstAttribute="centerX" secondItem="EjT-Wh-0sB" secondAttribute="centerX" id="vik-W0-Oeq"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-ih-Zaw">
+                                        <rect key="frame" x="267" y="25" width="50" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2cX-4s-w4o"/>
+                                            <constraint firstAttribute="width" constant="50" id="9uI-SE-BQ7"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="8GI-Tt-n8a" firstAttribute="top" secondItem="11o-4L-ln6" secondAttribute="top" id="5Ja-HU-Bbm"/>
                                     <constraint firstItem="8GI-Tt-n8a" firstAttribute="leading" secondItem="Zhk-lP-Xdh" secondAttribute="trailing" constant="10" id="JNW-T1-tZx"/>
+                                    <constraint firstItem="Yoc-ih-Zaw" firstAttribute="centerY" secondItem="11o-4L-ln6" secondAttribute="centerY" id="Szc-Ld-TRy"/>
                                     <constraint firstItem="8GI-Tt-n8a" firstAttribute="width" secondItem="Zhk-lP-Xdh" secondAttribute="width" id="VXJ-96-uzK"/>
                                     <constraint firstAttribute="height" constant="80" id="f4A-Fr-rrD"/>
                                     <constraint firstAttribute="bottom" secondItem="8GI-Tt-n8a" secondAttribute="bottom" id="jov-VO-3QJ"/>
@@ -93,6 +107,7 @@
                                     <constraint firstItem="Zhk-lP-Xdh" firstAttribute="leading" secondItem="11o-4L-ln6" secondAttribute="leading" id="oKa-zA-MkM"/>
                                     <constraint firstItem="Zhk-lP-Xdh" firstAttribute="top" secondItem="11o-4L-ln6" secondAttribute="top" id="sTa-Ji-Sos"/>
                                     <constraint firstAttribute="trailing" secondItem="8GI-Tt-n8a" secondAttribute="trailing" id="t7Z-mY-3Wv"/>
+                                    <constraint firstItem="Yoc-ih-Zaw" firstAttribute="centerX" secondItem="11o-4L-ln6" secondAttribute="centerX" id="zeo-3Y-0sW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -105,9 +120,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityViewSensors" destination="Yoc-ih-Zaw" id="ZGi-XZ-jE8"/>
                         <outlet property="labelLuminosity" destination="5nP-dx-0X2" id="7JC-4Y-chi"/>
                         <outlet property="labelTemperature" destination="3EN-fd-Dqd" id="PUZ-Fq-qTi"/>
                         <outlet property="viewLuminosity" destination="8GI-Tt-n8a" id="FDt-ZG-AhB"/>
+                        <outlet property="viewSensors" destination="11o-4L-ln6" id="2uK-yj-MVK"/>
                         <outlet property="viewTemperature" destination="Zhk-lP-Xdh" id="Znp-Pr-WJi"/>
                     </connections>
                 </viewController>

@@ -15,11 +15,13 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - DateTools (1.7.0)
+  - DGActivityIndicatorView (2.0)
   - MQTTKit (0.1.0-next)
 
 DEPENDENCIES:
   - BlocksKit
   - DateTools
+  - DGActivityIndicatorView
   - MQTTKit (from `https://github.com/mobile-web-messaging/MQTTKit.git`)
 
 EXTERNAL SOURCES:
@@ -34,6 +36,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   MQTTKit: 513ffc31464db7adeffefac986e228fdf6cd87e5
 
 COCOAPODS: 0.39.0
