@@ -65,7 +65,6 @@
                 value         = [NSString stringWithFormat:@"%d", [val integerValue]];
                 label         = [self setSensorsValue:self.labelLuminosity withText:value format:@"%@ %%"];
             }
-            [self animateLabel:label];
         }
         [self.sensorsValues setObject:value forKey:topic];
     });
