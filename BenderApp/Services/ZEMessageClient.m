@@ -32,9 +32,9 @@
             }
         }
     }];
-    
     [self handleMessage:client];
 }
+
 
 - (void) handleMessage: (MQTTClient *) client {
     [client setMessageHandler:^(MQTTMessage *message) {
