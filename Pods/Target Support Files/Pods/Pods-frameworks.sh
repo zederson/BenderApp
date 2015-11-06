@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/DateTools.framework"
   install_framework "Pods/MBCircularProgressBar.framework"
   install_framework "Pods/MQTTKit.framework"
+  install_framework "Pods/NYAlertViewController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/BlocksKit.framework"
@@ -96,4 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/DateTools.framework"
   install_framework "Pods/MBCircularProgressBar.framework"
   install_framework "Pods/MQTTKit.framework"
+  install_framework "Pods/NYAlertViewController.framework"
 fi

@@ -8,5 +8,4 @@ pod 'DateTools'
 pod 'BlocksKit'
 pod 'DGActivityIndicatorView'
 pod 'MBCircularProgressBar'
-
-# https://www.cocoacontrols.com/controls/mbcircularprogressbar
+pod 'NYAlertViewController'

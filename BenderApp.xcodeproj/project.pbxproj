@@ -16,6 +16,7 @@
 		53EA883B1BE7E181007712DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EA88301BE7E181007712DB /* LaunchScreen.storyboard */; };
 		53EA883C1BE7E181007712DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EA88321BE7E181007712DB /* Main.storyboard */; };
 		53EA883E1BE7E181007712DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88361BE7E181007712DB /* main.m */; };
+		53F2EBFA1BECEA3B00F28D87 /* ViewController+ZEMainCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2EBF91BECEA3B00F28D87 /* ViewController+ZEMainCategory.m */; };
 		8C9AA8F68EF9C8B584F1E9DF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BB35A1DE1B9EF78A7E7E6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		53EA88331BE7E181007712DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53EA88351BE7E181007712DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EA88361BE7E181007712DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53F2EBF81BECEA3B00F28D87 /* ViewController+ZEMainCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+ZEMainCategory.h"; sourceTree = "<group>"; };
+		53F2EBF91BECEA3B00F28D87 /* ViewController+ZEMainCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ZEMainCategory.m"; sourceTree = "<group>"; };
 		99FF0AF4DE8BE0B637BF9F0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D00BB35A1DE1B9EF78A7E7E6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +155,7 @@
 		53EA882A1BE7E181007712DB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				53F2EBF71BECEA1F00F28D87 /* ViewCategory */,
 				53EA882B1BE7E181007712DB /* ViewController.h */,
 				53EA882C1BE7E181007712DB /* ViewController.m */,
 			);
@@ -198,6 +202,15 @@
 				53A2544D1BE9540000DCD374 /* ZEMessageClient.m */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		53F2EBF71BECEA1F00F28D87 /* ViewCategory */ = {
+			isa = PBXGroup;
+			children = (
+				53F2EBF81BECEA3B00F28D87 /* ViewController+ZEMainCategory.h */,
+				53F2EBF91BECEA3B00F28D87 /* ViewController+ZEMainCategory.m */,
+			);
+			path = ViewCategory;
 			sourceTree = "<group>";
 		};
 		8EA7058B11DF4CC364860C5F /* Pods */ = {
@@ -404,6 +417,7 @@
 			files = (
 				53EA88391BE7E181007712DB /* ViewController.m in Sources */,
 				53EA883E1BE7E181007712DB /* main.m in Sources */,
+				53F2EBFA1BECEA3B00F28D87 /* ViewController+ZEMainCategory.m in Sources */,
 				53EA88381BE7E181007712DB /* AppDelegate.m in Sources */,
 				53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */,
 			);

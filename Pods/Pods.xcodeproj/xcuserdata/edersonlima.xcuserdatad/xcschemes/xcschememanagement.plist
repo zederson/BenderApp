@@ -19,7 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBCircularProgressBar-MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MQTTKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NYAlertViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>14290995F5D80124B56B229CF3A9DA0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>291621037D68F7869D267C25CE205F97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>413BEC720946F0B4A1E05A7F68D48697</key>
+		<key>609B4457212358FB9F737E2A6108427D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>609B4457212358FB9F737E2A6108427D</key>
+		<key>860A9179BCFD9F1C616D8653DB2B4F91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FC4B2785BB68892651401B8A26A15AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>AFEDA8059B169E4068B6DCC4D2F0B0E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDB96DA35F76AE7E6D5C409613DB6D4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
