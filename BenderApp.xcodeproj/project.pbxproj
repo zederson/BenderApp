@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		536E18771BED5B3E004CD13D /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 536E18761BED5B3E004CD13D /* button.mp3 */; };
 		53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A2544D1BE9540000DCD374 /* ZEMessageClient.m */; };
 		53EA880F1BE7DF22007712DB /* BenderAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA880E1BE7DF22007712DB /* BenderAppTests.m */; };
 		53EA881A1BE7DF22007712DB /* BenderAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA88191BE7DF22007712DB /* BenderAppUITests.m */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		536E18761BED5B3E004CD13D /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
 		53A2544C1BE9540000DCD374 /* ZEMessageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMessageClient.h; sourceTree = "<group>"; };
 		53A2544D1BE9540000DCD374 /* ZEMessageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMessageClient.m; sourceTree = "<group>"; };
 		53EA87F11BE7DF21007712DB /* BenderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		536E18751BED5B3E004CD13D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				536E18761BED5B3E004CD13D /* button.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		53EA87E81BE7DF21007712DB = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		53EA87F31BE7DF22007712DB /* BenderApp */ = {
 			isa = PBXGroup;
 			children = (
+				536E18751BED5B3E004CD13D /* Sounds */,
 				53EA883F1BE7E202007712DB /* Services */,
 				53EA88271BE7E181007712DB /* AppDelegate */,
 				53EA882A1BE7E181007712DB /* Controllers */,
@@ -340,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536E18771BED5B3E004CD13D /* button.mp3 in Resources */,
 				53EA883B1BE7E181007712DB /* LaunchScreen.storyboard in Resources */,
 				53EA883A1BE7E181007712DB /* Assets.xcassets in Resources */,
 				53EA883C1BE7E181007712DB /* Main.storyboard in Resources */,

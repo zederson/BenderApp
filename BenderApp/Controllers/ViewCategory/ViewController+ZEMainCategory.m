@@ -66,37 +66,22 @@
 }
 
 - (void) handleLuminosityPress :(UITapGestureRecognizer *)recognizer {
+    if (recognizer.state != UIGestureRecognizerStateBegan)
+        return;
     
-    NSString *kSuccessTitle = @"Congratulations";
-    NSString *kButtonTitle = @"Done";
-    NSString *kSubtitle = @"You've just displayed this awesome Pop Up View";
+    NSString *kSuccessTitle = @"Luminosidade";
+    NSString *kButtonTitle  = @"Voltar";
+    NSString *kSubtitle     = @"Ativar controle de intensidade das luzes através do sensor de luminosidade?";
+    SCLAlertView *alert     = [[SCLAlertView alloc] initWithNewWindow];
+    alert.soundURL          = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button.mp3", [NSBundle mainBundle].resourcePath]];
     
-    SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
-    SCLButton *button = [alert addButton:@"First Button" target:self selector:@selector(firstButton)];
-    
-    button.buttonFormatBlock = ^NSDictionary* (void)
-    {
-        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
-        
-        buttonConfig[@"backgroundColor"] = [UIColor whiteColor];
-        buttonConfig[@"textColor"] = [UIColor blackColor];
-        buttonConfig[@"borderWidth"] = @2.0f;
-        buttonConfig[@"borderColor"] = [UIColor greenColor];
-        
-        return buttonConfig;
-    };
-    
-    [alert addButton:@"Second Button" actionBlock:^(void) {
-        NSLog(@"Second button tapped");
+    [alert addButton:@"Ativar" actionBlock:^(void) {
     }];
     
-    alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [NSBundle mainBundle].resourcePath]];
+    [alert addButton:@"Desativar" actionBlock:^(void) {
+    }];
     
-    [alert showSuccess:kSuccessTitle subTitle:kSubtitle closeButtonTitle:kButtonTitle duration:0.0f];
-}
-
-- (void)firstButton {
-    NSLog(@"First button tapped");
+    [alert showInfo:kSuccessTitle subTitle:kSubtitle closeButtonTitle:kButtonTitle duration:0.0f];
 }
 
 @end
