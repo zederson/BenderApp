@@ -82,8 +82,8 @@
 }
 
 - (void) configureSensorsViews {
-    self.viewTemperature.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors.jpg"]];
-    self.viewLuminosity.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors.jpg"]];
+    self.viewTemperature.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors_2.jpg"]];
+    self.viewLuminosity.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_sensors_2.jpg"]];
     
     self.viewTemperature.layer.cornerRadius  = 15.0f;
     self.viewTemperature.layer.masksToBounds = YES;
