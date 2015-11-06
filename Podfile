@@ -7,6 +7,6 @@ pod 'MQTTKit', :git => 'https://github.com/mobile-web-messaging/MQTTKit.git'
 pod 'DateTools'
 pod 'BlocksKit'
 pod 'DGActivityIndicatorView'
+pod 'MBCircularProgressBar'
 
 # https://www.cocoacontrols.com/controls/mbcircularprogressbar
-# https://github.com/xhzengAIB/XHAmazingLoading

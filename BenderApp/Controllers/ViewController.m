@@ -10,18 +10,20 @@
 #import <MQTTKit/MQTTKit.h>
 #import "ZEMessageClient.h"
 #import <DGActivityIndicatorView/DGActivityIndicatorView.h>
+#import <MBCircularProgressBar/MBCircularProgressBarView.h>
 
 @interface ViewController ()<ZeMessageClientDelegate>
 
 //outlets de sensores
 @property (nonatomic, weak) IBOutlet UILabel *labelTemperature;
-@property (nonatomic, weak) IBOutlet UILabel *labelLuminosity;
 
 @property (nonatomic, weak) IBOutlet UIView *viewTemperature;
 @property (nonatomic, weak) IBOutlet UIView *viewLuminosity;
 @property (nonatomic, weak) IBOutlet UIView *viewSensors;
 @property (nonatomic, weak) IBOutlet UIView *activityViewSensors;
 @property (nonatomic, strong) DGActivityIndicatorView *activitySensors;
+
+@property (nonatomic, weak) IBOutlet MBCircularProgressBarView *progressLuminosity;
 
 //locals
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *sensorsValues;
@@ -58,27 +60,18 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self stopActivity:self.activitySensors];
         NSString *lastValue = [self.sensorsValues objectForKey:topic];
-        NSString *value     = message;
-        
         if (![topic isEqualToString:lastValue]) {
-            UILabel *label = nil;
             if ([@"sensors/temperature" isEqualToString:topic]) {
-                label = [self setSensorsValue:self.labelTemperature withText:message format:@"%@"];
+                self.labelTemperature.text = message;
             } else if ([@"sensors/luminosity" isEqualToString:topic]) {
-                NSNumber *val = @([message floatValue] / 1023 * 100);
-                value         = [NSString stringWithFormat:@"%d", [val integerValue]];
-                label         = [self setSensorsValue:self.labelLuminosity withText:value format:@"%@ %%"];
+                [self.progressLuminosity setValue:([message floatValue] / 1023.f * 100.f) animateWithDuration:1];
             }
         }
-        [self.sensorsValues setObject:value forKey:topic];
+        [self.sensorsValues setObject:message forKey:topic];
     });
 }
 
 # pragma mark Commons Methods
-- (UILabel *) setSensorsValue: (UILabel *) label withText: (NSString *) text format:(NSString *) format {
-    label.text = [NSString stringWithFormat:format, text];
-    return label;
-}
 
 - (void) animateLabel: (UIView *) label {
     label.transform = CGAffineTransformMakeScale(0, 0);
