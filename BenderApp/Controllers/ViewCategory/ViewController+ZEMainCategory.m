@@ -17,6 +17,8 @@
     messageClient.delegate         = self;
     [messageClient subscribe];
     [self configureSensorsViews];
+    [self configureTouchToLuminosityView];
+    
 }
 
 - (void) configureSensorsViews {
@@ -53,5 +55,13 @@
 - (void) stopActivity: (DGActivityIndicatorView *) activity {
     [activity stopAnimating];
     activity.hidden = YES;
+}
+
+- (void) configureTouchToLuminosityView {
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLuminosityPress:)];
+    [self.viewLuminosity addGestureRecognizer:longPress];
+}
+
+- (void) handleLuminosityPress :(UITapGestureRecognizer *)recognizer {
 }
 @end

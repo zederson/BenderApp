@@ -51,7 +51,10 @@
     });
 }
 
-# pragma mark Commons Methods
+# pragma mark Buttons
 
+- (IBAction)actionsForLuminosity:(id)sender {
+    
+}
 
 @end
