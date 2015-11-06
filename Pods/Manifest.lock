@@ -18,7 +18,7 @@ PODS:
   - DGActivityIndicatorView (2.0)
   - MBCircularProgressBar (0.3.2)
   - MQTTKit (0.1.0-next)
-  - NYAlertViewController (1.3.0)
+  - SCLAlertView-Objective-C (0.7.9)
 
 DEPENDENCIES:
   - BlocksKit
@@ -26,7 +26,7 @@ DEPENDENCIES:
   - DGActivityIndicatorView
   - MBCircularProgressBar
   - MQTTKit (from `https://github.com/mobile-web-messaging/MQTTKit.git`)
-  - NYAlertViewController
+  - SCLAlertView-Objective-C
 
 EXTERNAL SOURCES:
   MQTTKit:
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   MBCircularProgressBar: da24e75aa8a231564f10eb8d6d942fa78343486c
   MQTTKit: 513ffc31464db7adeffefac986e228fdf6cd87e5
-  NYAlertViewController: b93f82e2c1fc6d5e9485512ddbe7b481f463a074
+  SCLAlertView-Objective-C: e36ab12dc1ec4ff6f932888083b21d71a3a1ad23
 
 COCOAPODS: 0.39.0

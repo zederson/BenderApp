@@ -34,12 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>NYAlertViewController.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>SCLAlertView-Objective-C.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>14290995F5D80124B56B229CF3A9DA0B</key>
+		<key>291621037D68F7869D267C25CE205F97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>291621037D68F7869D267C25CE205F97</key>
+		<key>51BF5C68D276D7412765DA9BA07C997C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5830EA8D6E7AAFA108434A6FE0E37D61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>AFEDA8059B169E4068B6DCC4D2F0B0E9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FDB96DA35F76AE7E6D5C409613DB6D4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
