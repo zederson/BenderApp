@@ -7,6 +7,7 @@
 //
 #import "ViewController.h"
 #import "ZEMessageClient.h"
+#import "ZEColorPickerView.h"
 
 // Category
 #import "ViewController+ZEMainCategory.h"
@@ -54,9 +55,17 @@
 }
 
 # pragma mark Buttons
+- (IBAction)openColorPicker:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"ColorSegue" sender: @(sender.tag)];
+}
 
-- (IBAction)openColorPicker:(id)sender {
-    [self performSegueWithIdentifier:@"ColorSegue" sender:nil];
+# pragma mark Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ColorSegue"]){
+        ZEColorPickerView *controller = segue.destinationViewController;
+        NSNumber *bulbId = ((NSNumber *) sender);
+        controller.bulbId = [bulbId integerValue];
+    }
 }
 
 @end

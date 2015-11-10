@@ -31,9 +31,13 @@
 }
 
 - (void) publishToTopic: (BenderTopic) topic withMessage: (NSString *) message completionHandler:(void(^) () ) completion {
-    MQTTClient *client = [self getClient];
     NSString *stringTopic = [ZEMessageClient benderTopicName:topic];
-    [client publishString:message toTopic:stringTopic withQos:AtMostOnce retain:NO completionHandler:^(int mid) {
+    [self publishToTopicString:stringTopic withMessage:message completionHandler:completion];
+}
+
+- (void) publishToTopicString: (NSString *) topic withMessage: (NSString *) message completionHandler:(void(^) () ) completion {
+    MQTTClient *client = [self getClient];
+    [client publishString:message toTopic:topic withQos:AtMostOnce retain:NO completionHandler:^(int mid) {
         completion();
     }];
 }

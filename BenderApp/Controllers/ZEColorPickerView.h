@@ -10,4 +10,6 @@
 
 @interface ZEColorPickerView : UIViewController
 
+@property (nonatomic) NSInteger bulbId;
+
 @end

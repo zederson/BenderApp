@@ -146,7 +146,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjt-GW-0yv">
                                 <rect key="frame" x="0.0" y="160" width="600" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-od-8zr">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-od-8zr">
                                         <rect key="frame" x="125" y="28" width="63" height="63"/>
                                         <animations/>
                                         <constraints>
@@ -158,7 +158,7 @@
                                             <action selector="openColorPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A4y-lI-HRn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hQ-zm-DTj">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hQ-zm-DTj">
                                         <rect key="frame" x="414" y="28" width="63" height="65"/>
                                         <animations/>
                                         <constraints>
@@ -204,7 +204,7 @@
                         <outlet property="viewLuminosity" destination="8GI-Tt-n8a" id="FDt-ZG-AhB"/>
                         <outlet property="viewSensors" destination="11o-4L-ln6" id="2uK-yj-MVK"/>
                         <outlet property="viewTemperature" destination="Zhk-lP-Xdh" id="Znp-Pr-WJi"/>
-                        <segue destination="hRC-aO-jCV" kind="show" identifier="ColorSegue" id="4p3-17-VyK"/>
+                        <segue destination="hRC-aO-jCV" kind="presentation" identifier="ColorSegue" modalTransitionStyle="coverVertical" id="4p3-17-VyK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

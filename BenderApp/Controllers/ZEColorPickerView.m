@@ -8,6 +8,7 @@
 
 #import "ZEColorPickerView.h"
 #import "UIColor+ZEUIColor.h"
+#import "ZEMessageClient.h"
 
 #import <NKOColorPickerView/NKOColorPickerView.h>
 
@@ -15,6 +16,7 @@
 
 @property (nonatomic, weak) IBOutlet UIView *colorPicker;
 @property (nonatomic, weak) IBOutlet UIButton *buttonApply;
+@property (nonatomic, strong) NSString *bulbColor;
 
 @end
 
@@ -35,15 +37,15 @@
 }
 
 - (IBAction) applyColor:(id)sender {
-    
+    NSString *topic                = [NSString stringWithFormat:@"lights/%d/color", self.bulbId];
+    ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
+    [messageClient publishToTopicString:topic withMessage:self.bulbColor completionHandler:^{ }];
 }
 
 # pragma mark local methods
 - (void) setColor: (UIColor *) color {
     self.buttonApply.backgroundColor = color;
-    
-    NSString *colorHex = [UIColor hexStringFromColor:color];
-    NSLog(@"%@", colorHex);
+    self.bulbColor                   = [UIColor hexStringFromColor:color];
 }
 
 - (void) configureView {

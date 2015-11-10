@@ -32,6 +32,8 @@ typedef enum {
 
 - (void) subscribe;
 - (void) publishToTopic: (BenderTopic) topic withMessage: (NSString *) message completionHandler:(void(^) () ) completion;
+- (void) publishToTopicString: (NSString *) topic withMessage: (NSString *) message completionHandler:(void(^) () ) completion;
+    
 - (NSString *) host;
 - (NSString *) app_name;
 
