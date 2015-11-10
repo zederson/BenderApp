@@ -143,11 +143,46 @@
                                     <constraint firstItem="Yoc-ih-Zaw" firstAttribute="centerX" secondItem="11o-4L-ln6" secondAttribute="centerX" id="vEF-dX-naw"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjt-GW-0yv">
+                                <rect key="frame" x="0.0" y="160" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-od-8zr">
+                                        <rect key="frame" x="125" y="28" width="63" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="95D-de-t2q"/>
+                                            <constraint firstAttribute="height" constant="63" id="KEh-n7-glU"/>
+                                        </constraints>
+                                        <state key="normal" image="bulb" backgroundImage="bulb"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hQ-zm-DTj">
+                                        <rect key="frame" x="414" y="28" width="63" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="73X-va-QWj"/>
+                                        </constraints>
+                                        <state key="normal" image="bulb" backgroundImage="bulb">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2hQ-zm-DTj" firstAttribute="top" secondItem="Gjt-GW-0yv" secondAttribute="topMargin" constant="20" id="1qm-Ak-sjF"/>
+                                    <constraint firstItem="CPF-od-8zr" firstAttribute="top" secondItem="Gjt-GW-0yv" secondAttribute="topMargin" constant="20" id="IGP-0U-w7C"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="CPF-od-8zr" secondAttribute="bottom" constant="1" id="X5K-iV-JYE"/>
+                                    <constraint firstItem="2hQ-zm-DTj" firstAttribute="bottom" secondItem="Gjt-GW-0yv" secondAttribute="bottomMargin" constant="1" id="hPF-9x-jMm"/>
+                                    <constraint firstAttribute="height" constant="100" id="l2L-O7-7Us"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.9931381427" blue="0.97685644989999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Gjt-GW-0yv" firstAttribute="top" secondItem="11o-4L-ln6" secondAttribute="bottom" constant="10" id="Dtn-FG-QSU"/>
+                            <constraint firstAttribute="trailing" secondItem="Gjt-GW-0yv" secondAttribute="trailing" id="HwB-vm-TyF"/>
+                            <constraint firstItem="Gjt-GW-0yv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PeF-4C-R5D"/>
                             <constraint firstItem="11o-4L-ln6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="bRk-Xe-Zdy"/>
+                            <constraint firstItem="CPF-od-8zr" firstAttribute="centerX" secondItem="uZH-6Z-BIZ" secondAttribute="centerX" id="cBu-G8-k0W"/>
+                            <constraint firstItem="2hQ-zm-DTj" firstAttribute="centerX" secondItem="XtS-cQ-q39" secondAttribute="centerX" id="owJ-CW-zLV"/>
                             <constraint firstItem="11o-4L-ln6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="sPk-WF-0WD"/>
                             <constraint firstAttribute="trailing" secondItem="11o-4L-ln6" secondAttribute="trailing" constant="8" id="w69-iF-NCu"/>
                         </constraints>
@@ -166,4 +201,7 @@
             <point key="canvasLocation" x="375" y="224"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bulb" width="85" height="85"/>
+    </resources>
 </document>
