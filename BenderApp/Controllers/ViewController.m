@@ -33,7 +33,8 @@
 
 # pragma mark Bender Messages
 - (NSArray<NSString *> *)topicsToSubscribes {
-    return @[@"sensors/luminosity", @"sensors/temperature"];
+    return @[[ZEMessageClient benderTopicName:BenderReadLuminosity],
+             [ZEMessageClient benderTopicName:BenderReadTemperature] ];
 }
 
 - (void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
@@ -41,9 +42,9 @@
         [self stopActivity:self.activitySensors];
         NSString *lastValue = [self.sensorsValues objectForKey:topic];
         if (![topic isEqualToString:lastValue]) {
-            if ([@"sensors/temperature" isEqualToString:topic]) {
+            if ([[ZEMessageClient benderTopicName:BenderReadTemperature] isEqualToString:topic]) {
                 self.labelTemperature.text = message;
-            } else if ([@"sensors/luminosity" isEqualToString:topic]) {
+            } else if ([[ZEMessageClient benderTopicName:BenderReadLuminosity] isEqualToString:topic]) {
                 [self.progressLuminosity setValue:([message floatValue] / 1023.f * 100.f) animateWithDuration:1];
             }
         }

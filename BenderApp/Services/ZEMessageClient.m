@@ -21,6 +21,22 @@
     return instance;
 }
 
++ (NSString *) benderTopicName: (BenderTopic) topic {
+    NSArray *arr = @[
+                     @"sensors/luminosity",
+                     @"sensors/temperature",
+                     @"lights/sensor/luminosity"
+                     ];
+    return (NSString *)[arr objectAtIndex:topic];
+}
+
+- (void) publishToTopic: (BenderTopic) topic withMessage: (NSString *) message {
+    MQTTClient *client = [self getClient];
+    NSString *stringTopic = [ZEMessageClient benderTopicName:topic];
+    [client publishString:message toTopic:stringTopic withQos:AtMostOnce retain:NO completionHandler:^(int mid) {
+    }];
+}
+
 - (void) subscribe {
     MQTTClient *client = [self getClient];
 
@@ -34,7 +50,6 @@
     }];
     [self handleMessage:client];
 }
-
 
 - (void) handleMessage: (MQTTClient *) client {
     [client setMessageHandler:^(MQTTMessage *message) {

@@ -71,14 +71,18 @@
     
     NSString *kSuccessTitle = @"Luminosidade";
     NSString *kButtonTitle  = @"Voltar";
-    NSString *kSubtitle     = @"Ativar controle de intensidade das luzes através do sensor de luminosidade?";
+    NSString *kSubtitle     = @"Controle de intensidade das luzes através do sensor de luminosidade.";
     SCLAlertView *alert     = [[SCLAlertView alloc] initWithNewWindow];
     alert.soundURL          = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button.mp3", [NSBundle mainBundle].resourcePath]];
     
     [alert addButton:@"Ativar" actionBlock:^(void) {
+        ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
+        [messageClient publishToTopic:BenderCandleLuminosity withMessage:@"true"];
     }];
     
     [alert addButton:@"Desativar" actionBlock:^(void) {
+        ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
+        [messageClient publishToTopic:BenderCandleLuminosity withMessage:@"false"];
     }];
     
     [alert showInfo:kSuccessTitle subTitle:kSubtitle closeButtonTitle:kButtonTitle duration:0.0f];

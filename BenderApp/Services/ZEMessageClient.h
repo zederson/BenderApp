@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    BenderReadLuminosity,
+    BenderReadTemperature,
+    BenderCandleLuminosity
+} BenderTopic;
+
 @class ZEMessageClient;
 
 @protocol ZeMessageClientDelegate
@@ -21,9 +27,11 @@
 
 @property (nonatomic, strong) id delegate;
 
-+(ZEMessageClient *) sharedInstance;
++ (ZEMessageClient *) sharedInstance;
++ (NSString *) benderTopicName: (BenderTopic) topic;
 
 - (void) subscribe;
+- (void) publishToTopic: (BenderTopic) topic withMessage: (NSString *) message;
 - (NSString *) host;
 - (NSString *) app_name;
 
