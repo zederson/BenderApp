@@ -37,7 +37,7 @@
 
 - (void) publishToTopicString: (NSString *) topic withMessage: (NSString *) message completionHandler:(void(^) () ) completion {
     MQTTClient *client = [self getClient];
-    [client publishString:message toTopic:topic withQos:AtMostOnce retain:NO completionHandler:^(int mid) {
+    [client publishString:message toTopic:topic withQos:AtLeastOnce retain:NO completionHandler:^(int mid) {
         completion();
     }];
 }
@@ -69,6 +69,11 @@
     dispatch_once(&onceToken, ^{
         client = [[MQTTClient alloc] initWithClientId:[self app_name]];
     });
+    
+    if (!client.connected) {
+        [client reconnect];
+    }
+    
     return client;
 }
 

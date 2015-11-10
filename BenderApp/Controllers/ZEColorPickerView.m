@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet UIView *colorPicker;
 @property (nonatomic, weak) IBOutlet UIButton *buttonApply;
 @property (nonatomic, strong) NSString *bulbColor;
+@property (nonatomic, strong) ZEMessageClient *messageClient;
 
 @end
 
@@ -38,8 +39,9 @@
 
 - (IBAction) applyColor:(id)sender {
     NSString *topic                = [NSString stringWithFormat:@"lights/%d/color", self.bulbId];
-    ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
-    [messageClient publishToTopicString:topic withMessage:self.bulbColor completionHandler:^{ }];
+    [self.messageClient publishToTopicString:topic withMessage:self.bulbColor completionHandler:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 # pragma mark local methods
@@ -49,6 +51,7 @@
 }
 
 - (void) configureView {
+    self.messageClient = [ZEMessageClient sharedInstance];
     NKOColorPickerDidChangeColorBlock colorDidChangeBlock = ^(UIColor *color){
         [self setColor:color];
     };
