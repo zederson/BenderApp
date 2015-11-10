@@ -18,6 +18,7 @@ PODS:
   - DGActivityIndicatorView (2.0)
   - MBCircularProgressBar (0.3.2)
   - MQTTKit (0.1.0-next)
+  - NKOColorPickerView (0.5)
   - SCLAlertView-Objective-C (0.7.9)
 
 DEPENDENCIES:
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - DGActivityIndicatorView
   - MBCircularProgressBar
   - MQTTKit (from `https://github.com/mobile-web-messaging/MQTTKit.git`)
+  - NKOColorPickerView
   - SCLAlertView-Objective-C
 
 EXTERNAL SOURCES:
@@ -43,6 +45,7 @@ SPEC CHECKSUMS:
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   MBCircularProgressBar: da24e75aa8a231564f10eb8d6d942fa78343486c
   MQTTKit: 513ffc31464db7adeffefac986e228fdf6cd87e5
+  NKOColorPickerView: 895ca86fe5bd16f27c311ce8f5888907efee29ad
   SCLAlertView-Objective-C: e36ab12dc1ec4ff6f932888083b21d71a3a1ad23
 
 COCOAPODS: 0.39.0

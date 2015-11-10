@@ -22,6 +22,7 @@
 @property (nonatomic, weak) IBOutlet UIView *viewLuminosity;
 @property (nonatomic, weak) IBOutlet UIView *viewSensors;
 @property (nonatomic, weak) IBOutlet UIView *activityViewSensors;
+@property (nonatomic, weak) IBOutlet UIView *bulbContainer;
 @property (nonatomic, strong) DGActivityIndicatorView *activitySensors;
 
 @property (nonatomic, weak) IBOutlet MBCircularProgressBarView *progressLuminosity;

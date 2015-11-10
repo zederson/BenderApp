@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NKOColorPickerView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0FFAEB4E2A80EEFB05F5AC5594FCDCF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>291621037D68F7869D267C25CE205F97</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>51BF5C68D276D7412765DA9BA07C997C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5830EA8D6E7AAFA108434A6FE0E37D61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>AFEDA8059B169E4068B6DCC4D2F0B0E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1CD1F1DE0F273D90638723EA7A09124</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1FCCB42FEC41F8F47E4E741E8D9D33C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

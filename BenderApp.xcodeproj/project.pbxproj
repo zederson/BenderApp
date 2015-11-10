@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5344F9A61BF1F2D900CF1A10 /* ZEColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F9A51BF1F2D900CF1A10 /* ZEColorPickerView.m */; };
+		5344F9AA1BF1FD6400CF1A10 /* UIColor+ZEUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F9A91BF1FD6400CF1A10 /* UIColor+ZEUIColor.m */; };
 		536E18771BED5B3E004CD13D /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 536E18761BED5B3E004CD13D /* button.mp3 */; };
 		53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A2544D1BE9540000DCD374 /* ZEMessageClient.m */; };
 		53EA880F1BE7DF22007712DB /* BenderAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EA880E1BE7DF22007712DB /* BenderAppTests.m */; };
@@ -40,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5344F9A41BF1F2D900CF1A10 /* ZEColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEColorPickerView.h; sourceTree = "<group>"; };
+		5344F9A51BF1F2D900CF1A10 /* ZEColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEColorPickerView.m; sourceTree = "<group>"; };
+		5344F9A81BF1FD6400CF1A10 /* UIColor+ZEUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZEUIColor.h"; sourceTree = "<group>"; };
+		5344F9A91BF1FD6400CF1A10 /* UIColor+ZEUIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZEUIColor.m"; sourceTree = "<group>"; };
 		536E18761BED5B3E004CD13D /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
 		53A2544C1BE9540000DCD374 /* ZEMessageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMessageClient.h; sourceTree = "<group>"; };
 		53A2544D1BE9540000DCD374 /* ZEMessageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMessageClient.m; sourceTree = "<group>"; };
@@ -91,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5344F9A71BF1FD4100CF1A10 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				5344F9A81BF1FD6400CF1A10 /* UIColor+ZEUIColor.h */,
+				5344F9A91BF1FD6400CF1A10 /* UIColor+ZEUIColor.m */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		536E18751BED5B3E004CD13D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +139,7 @@
 		53EA87F31BE7DF22007712DB /* BenderApp */ = {
 			isa = PBXGroup;
 			children = (
+				5344F9A71BF1FD4100CF1A10 /* Commons */,
 				536E18751BED5B3E004CD13D /* Sounds */,
 				53EA883F1BE7E202007712DB /* Services */,
 				53EA88271BE7E181007712DB /* AppDelegate */,
@@ -169,6 +185,8 @@
 				53F2EBF71BECEA1F00F28D87 /* ViewCategory */,
 				53EA882B1BE7E181007712DB /* ViewController.h */,
 				53EA882C1BE7E181007712DB /* ViewController.m */,
+				5344F9A41BF1F2D900CF1A10 /* ZEColorPickerView.h */,
+				5344F9A51BF1F2D900CF1A10 /* ZEColorPickerView.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -430,7 +448,9 @@
 				53EA88391BE7E181007712DB /* ViewController.m in Sources */,
 				53EA883E1BE7E181007712DB /* main.m in Sources */,
 				53F2EBFA1BECEA3B00F28D87 /* ViewController+ZEMainCategory.m in Sources */,
+				5344F9A61BF1F2D900CF1A10 /* ZEColorPickerView.m in Sources */,
 				53EA88381BE7E181007712DB /* AppDelegate.m in Sources */,
+				5344F9AA1BF1FD6400CF1A10 /* UIColor+ZEUIColor.m in Sources */,
 				53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

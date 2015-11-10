@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/DateTools.framework"
   install_framework "Pods/MBCircularProgressBar.framework"
   install_framework "Pods/MQTTKit.framework"
+  install_framework "Pods/NKOColorPickerView.framework"
   install_framework "Pods/SCLAlertView_Objective_C.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -97,5 +98,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/DateTools.framework"
   install_framework "Pods/MBCircularProgressBar.framework"
   install_framework "Pods/MQTTKit.framework"
+  install_framework "Pods/NKOColorPickerView.framework"
   install_framework "Pods/SCLAlertView_Objective_C.framework"
 fi

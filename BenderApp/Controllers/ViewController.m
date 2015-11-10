@@ -26,9 +26,10 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [self animateView:self.viewTemperature];
     [self animateView:self.viewLuminosity];
+    [self animateView:self.bulbContainer];
 }
 
 # pragma mark Bender Messages
@@ -54,8 +55,8 @@
 
 # pragma mark Buttons
 
-- (IBAction)actionsForLuminosity:(id)sender {
-    
+- (IBAction)openColorPicker:(id)sender {
+    [self performSegueWithIdentifier:@"ColorSegue" sender:nil];
 }
 
 @end
