@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ZEMessageClient.h"
+
 // libraries
 #import <MQTTKit/MQTTKit.h>
 #import <DGActivityIndicatorView/DGActivityIndicatorView.h>
@@ -26,6 +28,7 @@
 
 //locals
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *sensorsValues;
+@property (nonatomic, strong) ZEMessageClient *messageClient;
 
 @end
 

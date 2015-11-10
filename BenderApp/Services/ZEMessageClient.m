@@ -30,10 +30,11 @@
     return (NSString *)[arr objectAtIndex:topic];
 }
 
-- (void) publishToTopic: (BenderTopic) topic withMessage: (NSString *) message {
+- (void) publishToTopic: (BenderTopic) topic withMessage: (NSString *) message completionHandler:(void(^) () ) completion {
     MQTTClient *client = [self getClient];
     NSString *stringTopic = [ZEMessageClient benderTopicName:topic];
     [client publishString:message toTopic:stringTopic withQos:AtMostOnce retain:NO completionHandler:^(int mid) {
+        completion();
     }];
 }
 

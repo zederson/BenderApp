@@ -15,10 +15,10 @@
 @implementation ViewController (ZEMainCategory)
 
 - (void) configureView {
-    self.sensorsValues             = [NSMutableDictionary dictionary];
-    ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
-    messageClient.delegate         = self;
-    [messageClient subscribe];
+    self.sensorsValues          = [NSMutableDictionary dictionary];
+    self.messageClient          = [ZEMessageClient sharedInstance];
+    self.messageClient.delegate = self;
+    [self.messageClient subscribe];
     [self configureSensorsViews];
     [self configureTouchToLuminosityView];
     
@@ -56,8 +56,17 @@
 }
 
 - (void) stopActivity: (DGActivityIndicatorView *) activity {
-    [activity stopAnimating];
-    activity.hidden = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [activity stopAnimating];
+        activity.hidden = YES;
+    });
+}
+
+- (void) startActivity: (DGActivityIndicatorView *) activity {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        activity.hidden = NO;
+        [activity startAnimating];
+    });
 }
 
 - (void) configureTouchToLuminosityView {
@@ -76,13 +85,13 @@
     alert.soundURL          = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button.mp3", [NSBundle mainBundle].resourcePath]];
     
     [alert addButton:@"Ativar" actionBlock:^(void) {
-        ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
-        [messageClient publishToTopic:BenderCandleLuminosity withMessage:@"true"];
+        [self.messageClient publishToTopic:BenderCandleLuminosity withMessage:@"true" completionHandler:^{
+        }];
     }];
     
     [alert addButton:@"Desativar" actionBlock:^(void) {
-        ZEMessageClient *messageClient = [ZEMessageClient sharedInstance];
-        [messageClient publishToTopic:BenderCandleLuminosity withMessage:@"false"];
+        [self.messageClient publishToTopic:BenderCandleLuminosity withMessage:@"false" completionHandler:^{
+        }];
     }];
     
     [alert showInfo:kSuccessTitle subTitle:kSubtitle closeButtonTitle:kButtonTitle duration:0.0f];
