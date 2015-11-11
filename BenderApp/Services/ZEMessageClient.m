@@ -25,7 +25,8 @@
     NSArray *arr = @[
                      @"sensors/luminosity",
                      @"sensors/temperature",
-                     @"lights/sensor/luminosity"
+                     @"lights/sensor/luminosity",
+                     @"lights/off"
                      ];
     return (NSString *)[arr objectAtIndex:topic];
 }

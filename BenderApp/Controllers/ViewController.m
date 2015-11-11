@@ -59,6 +59,11 @@
     [self performSegueWithIdentifier:@"ColorSegue" sender: sender];
 }
 
+- (IBAction)turnOffBulbs:(id)sender {
+    [self.messageClient publishToTopic:BenderTurnOffBulbs withMessage:@"" completionHandler:^{
+    }];
+}
+
 # pragma mark Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ColorSegue"]){

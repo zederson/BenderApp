@@ -11,7 +11,8 @@
 typedef enum {
     BenderReadLuminosity,
     BenderReadTemperature,
-    BenderCandleLuminosity
+    BenderCandleLuminosity,
+    BenderTurnOffBulbs
 } BenderTopic;
 
 @class ZEMessageClient;
