@@ -56,15 +56,17 @@
 
 # pragma mark Buttons
 - (IBAction)openColorPicker:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"ColorSegue" sender: @(sender.tag)];
+    [self performSegueWithIdentifier:@"ColorSegue" sender: sender];
 }
 
 # pragma mark Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ColorSegue"]){
         ZEColorPickerView *controller = segue.destinationViewController;
-        NSNumber *bulbId = ((NSNumber *) sender);
-        controller.bulbId = [bulbId integerValue];
+        
+        UIButton *button = (UIButton *) sender;
+        controller.targetButton = button;
+        controller.bulbId       = button.tag;
     }
 }
 

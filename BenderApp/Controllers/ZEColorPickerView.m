@@ -16,7 +16,7 @@
 
 @property (nonatomic, weak) IBOutlet UIView *colorPicker;
 @property (nonatomic, weak) IBOutlet UIButton *buttonApply;
-@property (nonatomic, strong) NSString *bulbColor;
+@property (nonatomic, strong) UIColor *bulbColor;
 @property (nonatomic, strong) ZEMessageClient *messageClient;
 
 @end
@@ -38,8 +38,11 @@
 }
 
 - (IBAction) applyColor:(id)sender {
-    NSString *topic                = [NSString stringWithFormat:@"lights/%d/color", self.bulbId];
-    [self.messageClient publishToTopicString:topic withMessage:self.bulbColor completionHandler:^{
+    NSString *topic = [NSString stringWithFormat:@"lights/%d/color", self.bulbId];
+    NSString *color = [UIColor hexStringFromColor:self.bulbColor];
+    
+    [self.messageClient publishToTopicString:topic withMessage:color completionHandler:^{
+        [self setBorderColorButton];
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
 }
@@ -47,7 +50,7 @@
 # pragma mark local methods
 - (void) setColor: (UIColor *) color {
     self.buttonApply.backgroundColor = color;
-    self.bulbColor                   = [UIColor hexStringFromColor:color];
+    self.bulbColor                   = color;
 }
 
 - (void) configureView {
@@ -62,6 +65,15 @@
     [self.colorPicker addSubview:colorPickerView];
     self.buttonApply.layer.cornerRadius  = 15.0f;
     self.buttonApply.layer.masksToBounds = YES;
+}
+
+- (void) setBorderColorButton {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.targetButton.layer.borderColor  = [self.bulbColor CGColor];
+        self.targetButton.layer.borderWidth  = 2.0f;
+        self.targetButton.layer.cornerRadius = self.targetButton.layer.frame.size.width / 2;
+        self.targetButton.clipsToBounds      = YES;
+    });
 }
 
 @end
