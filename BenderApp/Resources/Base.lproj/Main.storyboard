@@ -196,10 +196,18 @@
                                     <constraint firstItem="2mo-hB-84x" firstAttribute="top" secondItem="Gjt-GW-0yv" secondAttribute="topMargin" constant="20" id="m8I-6D-Qsg"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventilador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9or-yL-kKR">
+                                <rect key="frame" x="8" y="280" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93949258209999997" green="0.090015527920000005" blue="0.140744601" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9or-yL-kKR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="4I4-mR-Fgb"/>
+                            <constraint firstItem="9or-yL-kKR" firstAttribute="top" secondItem="Gjt-GW-0yv" secondAttribute="bottom" constant="20" id="7Op-Jf-QWQ"/>
                             <constraint firstItem="Gjt-GW-0yv" firstAttribute="top" secondItem="11o-4L-ln6" secondAttribute="bottom" constant="10" id="Dtn-FG-QSU"/>
                             <constraint firstAttribute="trailing" secondItem="Gjt-GW-0yv" secondAttribute="trailing" id="HwB-vm-TyF"/>
                             <constraint firstItem="2mo-hB-84x" firstAttribute="centerX" secondItem="Yoc-ih-Zaw" secondAttribute="centerX" id="P7X-ov-DCF"/>
@@ -212,6 +220,7 @@
                     <connections>
                         <outlet property="activityViewSensors" destination="Yoc-ih-Zaw" id="ZGi-XZ-jE8"/>
                         <outlet property="bulbContainer" destination="Gjt-GW-0yv" id="ydC-eA-mwm"/>
+                        <outlet property="fanLabel" destination="9or-yL-kKR" id="Yfu-BE-sYm"/>
                         <outlet property="labelTemperature" destination="3EN-fd-Dqd" id="PUZ-Fq-qTi"/>
                         <outlet property="progressLuminosity" destination="bBl-aJ-ETu" id="Oz0-uM-gwm"/>
                         <outlet property="viewLuminosity" destination="8GI-Tt-n8a" id="FDt-ZG-AhB"/>

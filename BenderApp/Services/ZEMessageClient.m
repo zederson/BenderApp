@@ -26,7 +26,9 @@
                      @"sensors/luminosity",
                      @"sensors/temperature",
                      @"lights/sensor/luminosity",
-                     @"lights/off"
+                     @"lights/off",
+                     @"sensors/socket/1",
+                     @"jaiminho/message"
                      ];
     return (NSString *)[arr objectAtIndex:topic];
 }

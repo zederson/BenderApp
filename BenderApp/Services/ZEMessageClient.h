@@ -12,7 +12,9 @@ typedef enum {
     BenderReadLuminosity,
     BenderReadTemperature,
     BenderCandleLuminosity,
-    BenderTurnOffBulbs
+    BenderTurnOffBulbs,
+    BenderFanStatus,
+    BenderNotifications
 } BenderTopic;
 
 @class ZEMessageClient;

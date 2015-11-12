@@ -36,7 +36,9 @@
 # pragma mark Bender Messages
 - (NSArray<NSString *> *)topicsToSubscribes {
     return @[[ZEMessageClient benderTopicName:BenderReadLuminosity],
-             [ZEMessageClient benderTopicName:BenderReadTemperature] ];
+             [ZEMessageClient benderTopicName:BenderReadTemperature],
+             [ZEMessageClient benderTopicName:BenderFanStatus],
+             [ZEMessageClient benderTopicName:BenderNotifications] ];
 }
 
 - (void)benderHandleMessage:(NSString *)message toTopic:(NSString *)topic {
@@ -44,11 +46,7 @@
         [self stopActivity:self.activitySensors];
         NSString *lastValue = [self.sensorsValues objectForKey:topic];
         if (![topic isEqualToString:lastValue]) {
-            if ([[ZEMessageClient benderTopicName:BenderReadTemperature] isEqualToString:topic]) {
-                self.labelTemperature.text = message;
-            } else if ([[ZEMessageClient benderTopicName:BenderReadLuminosity] isEqualToString:topic]) {
-                [self.progressLuminosity setValue:([message floatValue] / 1023.f * 100.f) animateWithDuration:1];
-            }
+            [self processTopic:topic withMessage:message];
         }
         [self.sensorsValues setObject:message forKey:topic];
     });
@@ -74,5 +72,23 @@
         controller.bulbId       = button.tag;
     }
 }
+
+# pragma mark local methods
+- (void) processTopic:(NSString *) topic withMessage: (NSString *) message {
+    if ([[ZEMessageClient benderTopicName:BenderReadTemperature] isEqualToString:topic]) {
+        self.labelTemperature.text = message;
+    } else if ([[ZEMessageClient benderTopicName:BenderReadLuminosity] isEqualToString:topic]) {
+        [self.progressLuminosity setValue:([message floatValue] / 1023.f * 100.f) animateWithDuration:1];
+    } else if ([[ZEMessageClient benderTopicName:BenderFanStatus] isEqualToString:topic]) {
+        if ([message isEqualToString:@"0"]) {
+            self.fanLabel.textColor = [UIColor redColor];
+        } else {
+            self.fanLabel.textColor = [UIColor greenColor];
+        }
+    } else if ([[ZEMessageClient benderTopicName:BenderNotifications] isEqualToString:topic]) {
+        NSLog(message);
+    }
+}
+
 
 @end
