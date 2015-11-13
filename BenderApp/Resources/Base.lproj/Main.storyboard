@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -202,17 +202,27 @@
                                 <color key="textColor" red="0.93949258209999997" green="0.090015527920000005" blue="0.140744601" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-1U-eMY">
+                                <rect key="frame" x="8" y="331" width="584" height="261"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9or-yL-kKR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="4I4-mR-Fgb"/>
+                            <constraint firstAttribute="trailing" secondItem="uF6-1U-eMY" secondAttribute="trailing" constant="8" id="6WA-4M-UTG"/>
                             <constraint firstItem="9or-yL-kKR" firstAttribute="top" secondItem="Gjt-GW-0yv" secondAttribute="bottom" constant="20" id="7Op-Jf-QWQ"/>
                             <constraint firstItem="Gjt-GW-0yv" firstAttribute="top" secondItem="11o-4L-ln6" secondAttribute="bottom" constant="10" id="Dtn-FG-QSU"/>
+                            <constraint firstItem="uF6-1U-eMY" firstAttribute="top" secondItem="9or-yL-kKR" secondAttribute="bottom" constant="30" id="GFg-VC-exz"/>
                             <constraint firstAttribute="trailing" secondItem="Gjt-GW-0yv" secondAttribute="trailing" id="HwB-vm-TyF"/>
                             <constraint firstItem="2mo-hB-84x" firstAttribute="centerX" secondItem="Yoc-ih-Zaw" secondAttribute="centerX" id="P7X-ov-DCF"/>
                             <constraint firstItem="Gjt-GW-0yv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PeF-4C-R5D"/>
+                            <constraint firstItem="uF6-1U-eMY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="WxU-Cm-aRi"/>
                             <constraint firstItem="11o-4L-ln6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="bRk-Xe-Zdy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uF6-1U-eMY" secondAttribute="bottom" constant="8" id="qX4-26-qN2"/>
                             <constraint firstItem="11o-4L-ln6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="sPk-WF-0WD"/>
                             <constraint firstAttribute="trailing" secondItem="11o-4L-ln6" secondAttribute="trailing" constant="8" id="w69-iF-NCu"/>
                         </constraints>
@@ -222,6 +232,7 @@
                         <outlet property="bulbContainer" destination="Gjt-GW-0yv" id="ydC-eA-mwm"/>
                         <outlet property="fanLabel" destination="9or-yL-kKR" id="Yfu-BE-sYm"/>
                         <outlet property="labelTemperature" destination="3EN-fd-Dqd" id="PUZ-Fq-qTi"/>
+                        <outlet property="logView" destination="uF6-1U-eMY" id="B33-0x-fPu"/>
                         <outlet property="progressLuminosity" destination="bBl-aJ-ETu" id="Oz0-uM-gwm"/>
                         <outlet property="viewLuminosity" destination="8GI-Tt-n8a" id="FDt-ZG-AhB"/>
                         <outlet property="viewSensors" destination="11o-4L-ln6" id="2uK-yj-MVK"/>

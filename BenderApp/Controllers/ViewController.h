@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "ZEMessageClient.h"
+#import "ZEGeofenceMonitor.h"
 
 // libraries
 #import <MQTTKit/MQTTKit.h>
@@ -32,5 +33,6 @@
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *sensorsValues;
 @property (nonatomic, strong) ZEMessageClient *messageClient;
 
+@property (nonatomic, weak) IBOutlet UITextView *logView;
 @end
 

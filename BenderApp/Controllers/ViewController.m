@@ -11,8 +11,13 @@
 
 // Category
 #import "ViewController+ZEMainCategory.h"
+#import "ViewController+ZE_Geofencing.h"
 
-@interface ViewController ()<ZeMessageClientDelegate>
+// Libraries
+#import <CoreLocation/CoreLocation.h>
+
+@interface ViewController ()<ZeMessageClientDelegate, CLLocationManagerDelegate>
+
 
 @end
 
@@ -21,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureView];
+    
+    [self configureGeofencing];
 }
 
 - (void)didReceiveMemoryWarning {

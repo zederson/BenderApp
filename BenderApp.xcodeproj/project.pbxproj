@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490C49631BF5651300C71B2B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490C49621BF5651300C71B2B /* MapKit.framework */; };
+		490C49661BF5668000C71B2B /* ViewController+ZE_Geofencing.m in Sources */ = {isa = PBXBuildFile; fileRef = 490C49651BF5668000C71B2B /* ViewController+ZE_Geofencing.m */; };
+		490C49691BF56B8000C71B2B /* ZEGeofenceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 490C49681BF56B8000C71B2B /* ZEGeofenceMonitor.m */; };
 		5344F9A61BF1F2D900CF1A10 /* ZEColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F9A51BF1F2D900CF1A10 /* ZEColorPickerView.m */; };
 		5344F9AA1BF1FD6400CF1A10 /* UIColor+ZEUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F9A91BF1FD6400CF1A10 /* UIColor+ZEUIColor.m */; };
 		536E18771BED5B3E004CD13D /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 536E18761BED5B3E004CD13D /* button.mp3 */; };
@@ -41,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490C49621BF5651300C71B2B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		490C49641BF5668000C71B2B /* ViewController+ZE_Geofencing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+ZE_Geofencing.h"; sourceTree = "<group>"; };
+		490C49651BF5668000C71B2B /* ViewController+ZE_Geofencing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ZE_Geofencing.m"; sourceTree = "<group>"; };
+		490C49671BF56B8000C71B2B /* ZEGeofenceMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEGeofenceMonitor.h; sourceTree = "<group>"; };
+		490C49681BF56B8000C71B2B /* ZEGeofenceMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEGeofenceMonitor.m; sourceTree = "<group>"; };
 		4E023CE67284650DCDE4AAAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5344F9A41BF1F2D900CF1A10 /* ZEColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEColorPickerView.h; sourceTree = "<group>"; };
 		5344F9A51BF1F2D900CF1A10 /* ZEColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEColorPickerView.m; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490C49631BF5651300C71B2B /* MapKit.framework in Frameworks */,
 				8C9AA8F68EF9C8B584F1E9DF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +238,8 @@
 			children = (
 				53A2544C1BE9540000DCD374 /* ZEMessageClient.h */,
 				53A2544D1BE9540000DCD374 /* ZEMessageClient.m */,
+				490C49671BF56B8000C71B2B /* ZEGeofenceMonitor.h */,
+				490C49681BF56B8000C71B2B /* ZEGeofenceMonitor.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,6 +249,8 @@
 			children = (
 				53F2EBF81BECEA3B00F28D87 /* ViewController+ZEMainCategory.h */,
 				53F2EBF91BECEA3B00F28D87 /* ViewController+ZEMainCategory.m */,
+				490C49641BF5668000C71B2B /* ViewController+ZE_Geofencing.h */,
+				490C49651BF5668000C71B2B /* ViewController+ZE_Geofencing.m */,
 			);
 			path = ViewCategory;
 			sourceTree = "<group>";
@@ -254,6 +267,7 @@
 		E59AA0E585DAA7DD2E548440 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				490C49621BF5651300C71B2B /* MapKit.framework */,
 				D00BB35A1DE1B9EF78A7E7E6 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -331,6 +345,11 @@
 					53EA87F01BE7DF21007712DB = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 7Y9H794NC3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					53EA88091BE7DF22007712DB = {
 						CreatedOnToolsVersion = 7.1;
@@ -447,10 +466,12 @@
 			files = (
 				53EA88391BE7E181007712DB /* ViewController.m in Sources */,
 				53EA883E1BE7E181007712DB /* main.m in Sources */,
+				490C49691BF56B8000C71B2B /* ZEGeofenceMonitor.m in Sources */,
 				53F2EBFA1BECEA3B00F28D87 /* ViewController+ZEMainCategory.m in Sources */,
 				5344F9A61BF1F2D900CF1A10 /* ZEColorPickerView.m in Sources */,
 				53EA88381BE7E181007712DB /* AppDelegate.m in Sources */,
 				5344F9AA1BF1FD6400CF1A10 /* UIColor+ZEUIColor.m in Sources */,
+				490C49661BF5668000C71B2B /* ViewController+ZE_Geofencing.m in Sources */,
 				53A2544E1BE9540000DCD374 /* ZEMessageClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
