@@ -97,4 +97,11 @@
     [alert showInfo:kSuccessTitle subTitle:kSubtitle closeButtonTitle:kButtonTitle duration:0.0f];
 }
 
+- (void) localNotification: (NSString *) title withMessage: (NSString *) message {
+    UILocalNotification *notifier = [[UILocalNotification alloc] init];
+    notifier.fireDate             = [[NSDate date] dateByAddingTimeInterval:2];
+    notifier.alertTitle           = title;
+    notifier.alertBody            = message;
+    [[UIApplication sharedApplication] scheduleLocalNotification:notifier];
+}
 @end

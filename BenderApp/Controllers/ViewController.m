@@ -86,7 +86,7 @@
             self.fanLabel.textColor = [UIColor greenColor];
         }
     } else if ([[ZEMessageClient benderTopicName:BenderNotifications] isEqualToString:topic]) {
-        NSLog(message);
+        [self localNotification:@"Bender Avisa !" withMessage:message];
     }
 }
 

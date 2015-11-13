@@ -15,4 +15,5 @@
 - (void) addActivitySensors;
 - (void) animateView: (UIView *) view;
 - (void) stopActivity: (DGActivityIndicatorView *) activity;
+- (void) localNotification: (NSString *) title withMessage: (NSString *) message;
 @end
